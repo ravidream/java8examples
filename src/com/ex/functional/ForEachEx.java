@@ -10,8 +10,32 @@ public class ForEachEx {
         subList.add("Cauliflower");
         subList.add("LadyFinger");
         subList.add("Tomato");
+        
         System.out.println("------------Vegetable List--------------");
+        
+        for(int i = 0; i < subList.size(); i++) {
+        	System.out.println(subList.get(i));
+        }
+        System.out.println("--------------------------------------");
+        
+        for(String sub : subList) {
+        	System.out.println(sub);
+        }
+        
+        System.out.println("--------------------------------------");
+        
+        subList.forEach(sub -> {
+        	System.out.println(sub);
+        });
+        
+        
+        System.out.println("--------------------------------------");
+        
         subList.forEach(sub -> System.out.println(sub));
+        
+        System.out.println("--------------------------------------");
+        
+        subList.forEach(System.out::println);
   }
 }
 

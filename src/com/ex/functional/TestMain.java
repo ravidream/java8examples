@@ -1,17 +1,18 @@
 package com.ex.functional;
 
-class Main{
+class TestMain{
      public static void main(String args[]){
         //lambda expression
-        MyInterface fobj = (int x, int y)->System.out.println(x+y);
+        MyInterface myInterface = (int x, int y) -> System.out.println(x+y);
  
         System.out.print("Result : ");
-        fobj.testFunction(5,5);
-        fobj.defaultFunction();
+        myInterface.arithmeticFunction(5,5);
+        myInterface.defaultFunction();
         
-        fobj = (int x, int y)->System.out.println(x*y);
-        
-        System.out.print("Result : ");
-        fobj.testFunction(5,5);
+		
+		myInterface = (int x, int y) -> System.out.println(x*y);
+		  
+		System.out.print("Result : "); myInterface.arithmeticFunction(5,5);
+		 
     }
 }
